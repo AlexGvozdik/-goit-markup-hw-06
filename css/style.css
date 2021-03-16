@@ -11,6 +11,7 @@
   --secondary-fonts: Raleway, cursive;
 
   --letter-spacing: 0.03em;
+  --form-letter-spacing: 0.01em;
   --hero-title-letter-spacing: 0.06em;
   --main-links-letter-spacing: 0.02em;
 }
@@ -241,10 +242,6 @@ address {
   background-size: cover;
 }
 
-.hero-container {
-  text-align: center;
-}
-
 .hero-title {
   margin: 0 auto 30px;
   color: var(--primary-background-color);
@@ -254,11 +251,15 @@ address {
   line-height: 1.36;
   letter-spacing: var(--hero-title-letter-spacing);
   text-transform: uppercase;
+  text-align: center;
+}
+
+.div-primary-btn {
+  text-align: center;
 }
 
 .primary-button {
   cursor: pointer;
-
   padding: 10px 30px;
 
   color: var(--primary-background-color);
@@ -286,7 +287,7 @@ address {
   background-color:rgba(0, 0, 0, 0.2);
   opacity: 1;
   z-index: 1000;
-  transition: all 2550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -300,9 +301,12 @@ address {
   top: 50%;
   left: 50%;
   min-width: 528px;
-  min-height: 581px;
   transform: translate(-50%, -50%);
- 
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+
   background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -322,13 +326,207 @@ address {
   cursor:pointer;
 }
 
-.svg-cross-icon {
+.modal-svg-cross-icon {
   width: 11px;
   height: 11px;
-  fill:#000000;
+  fill:var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-btn-svg-cross:focus .modal-svg-cross-icon {
+  fill: var(--accent-text-color);
+}
 
+.modal-bold-title {
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: var(--letter-spacing);
+
+  color: var(--title-text-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  padding-right: 10px;
+
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--form-letter-spacing);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-text-color);
+}
+
+.at-start {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: var(--form-letter-spacing);
+
+  color: var(--paragraph-text-color);
+}
+
+.label-span-container {
+  display: block;
+  position: relative;
+
+  margin-top: 4px;
+
+}
+
+.modal-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill:var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .modal-svg {
+  fill: var(--accent-text-color);
+}
+
+.form-textarea {
+  display: block;
+  margin-top: 4px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-text-color);
+
+}
+.form-textarea {
+font-weight: 400;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: var(--form-letter-spacing);
+}
+
+.form-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-label-checkbox::before {
+  display: inline-block;
+  content:"";
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+}
+
+.form-input-checkbox:checked + .form-label-checkbox::before {
+  background-color: var(--accent-text-color);
+  border: 2px solid transparent;
+  background-image: url(../img/svg-icon/modal-elements/tick.svg);
+  background-origin:content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.form-input-checkbox:focus + .form-label-checkbox::before {
+outline: 1px solid var(--accent-text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+.form-label-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: var(--letter-spacing);
+
+  color: var(--paragraph-text-color);
+}
+
+.form-link-checkbox {
+  position:relative;
+  margin-left: 3px;
+
+  color:var(--accent-text-color);
+  text-decoration:none;
+}
+
+.form-link-checkbox::after {
+  position: absolute;
+  display: block;
+  content:"";
+  bottom: 5px;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-text-color);
+}
+
+.form-btn-send-info {
+  align-self: center;
+  cursor: pointer;
+  margin-top: 30px;
+  
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+  padding-right: 55px;
+  color:var(--primary-background-color);
+  background: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid #188CE8;
+}
 /* ==================== END HERO ===================== */
 
 /* ==================== FEATURES ===================== */
@@ -557,7 +755,6 @@ address {
   border-radius: 50%;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .social-link-item-link:hover,
@@ -675,6 +872,10 @@ address {
   color: var(--primary-background-color);
 }
 
+.social-join {
+  margin-right: 93px;
+}
+
 .join {
   display: block;
   margin-bottom: 20px;
@@ -722,6 +923,126 @@ address {
   fill: var(--primary-background-color);
 }
 
+.sign-up {
+  width: 100%;
+}
+
+.sign-up-bold-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+
+  color: var(--primary-background-color);
+}
+
+/* .sign-up-form {
+  display: block;
+min-width: 358px;
+} */
+
+.sign-up-input-email {
+  display: inline-block;
+  width: 358px;
+  margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--letter-spacing);
+
+  background-color: transparent;
+  color:var(--primary-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.sign-up-input-email::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-up-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 28px;
+
+  color: var(--primary-background-color);
+  background-color: var(--accent-text-color);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: var(--hero-title-letter-spacing);
+
+  min-width: 200px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow: hidden;
+
+}
+
+.sign-up-btn::after {
+  content:"";
+  display: inline-block;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  /* background-color: green; */
+  background-image: url(../img/svg-icon/sign-up/paper-jet.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin:border-box;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sign-up-btn:focus::after {
+  transform: translate(50px, -50px);
+}
+
+.sign-up-btn::before {
+  position: absolute;
+  bottom: 50%;
+  right: 28px;
+  transform: translateY(calc(50% + 40px));
+  content:"";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/svg-icon/sign-up/paper-jet.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin:border-box;
+  /* background-color: red; */
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sign-up-btn:focus::before {
+  transform: translateY(50%);
+}
+
+
+
+
+
 /* ==================== END FOOTER ===================== */
 /* ====================================================== PORTFOLIO.HTML ====================================== */
 /* ==================== PORT ===================== */
@@ -741,6 +1062,7 @@ address {
 }
 
 .portfolio-button {
+  cursor: pointer;
   padding: 6px 22px;
   border: transparent;
   border-radius: 4px;
@@ -756,8 +1078,7 @@ address {
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -766,7 +1087,6 @@ address {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--accent-text-color);
   color: var(--primary-background-color);
-  cursor: pointer;
 }
 
 .port-item:not(:first-child) {

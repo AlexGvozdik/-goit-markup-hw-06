@@ -67,16 +67,57 @@
                 <h1 class="hero-title">
                     ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА
                 </h1>
-                <button class="primary-button" data-modal-open type="button">
+                <div class="div-primary-btn">
+                    <button class="primary-button" data-modal-open type="button">
                     Заказать услугу
                 </button>
+                </div>
                 <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
                             <button class="close-btn-svg-cross" type="button" data-modal-close>
-                            <svg class="svg-cross-icon">
+                            <svg class="modal-svg-cross-icon">
                                 <use href="./img/svg-icon/sprite.svg#icon-cross"></use>
                             </svg>
                             </button>
+                            <b class="modal-bold-title">
+                                    Оставьте свои данные, мы вам перезвоним
+                            </b>
+                            <form action="#" class="modal-form">
+                                
+                                <label  class="form-label-name at-start">Имя
+                                    <span class="label-span-container">
+                                        <input type="text" name="user-name" class="form-input">
+                                        <svg class="modal-svg-person-icon modal-svg">
+                                        <use href="./img/svg-icon/sprite.svg#icon-person"></use></svg>
+                                    </span>
+                                </label>
+
+                                <label  class="form-label-tel at-start">Телефон
+                                    <span class="label-span-container">
+                                        <input type="tel" name="user-tel" class="form-input">
+                                        <svg class="modal-svg-phone-icon modal-svg">
+                                        <use href="./img/svg-icon/sprite.svg#icon-phone"></use></svg>
+                                    </span>
+                                </label>
+
+                                <label  class="form-label-mail at-start">Почта
+                                    <span class="label-span-container">
+                                        <input type="mail" name="user-mail" class="form-input">
+                                        <svg class="modal-svg-email-icon modal-svg">
+                                        <use href="./img/svg-icon/sprite.svg#icon-email"></use></svg>
+                                    </span>
+                                </label>
+
+                                <label class="textarea-label at-start">Комментарий
+                                    <textarea name="user-feedback" class="form-textarea" placeholder="Введите текст"></textarea>
+                                </label>
+                                <input type="checkbox" name="user-agreement" id="checkbox-tick" class="form-input-checkbox visually-hidden">
+                                <label for="checkbox-tick" class="form-label-checkbox">Соглашаюсь с рассылкой и принимаю
+                                    <a href="/" class="form-link-checkbox">Условия договора</a>
+                                </label>
+                                
+                                <button type="submit" class="form-btn-send-info">Отправить</button>
+                            </form>
                         </div>
                     </div>
             </div>
@@ -431,10 +472,21 @@
                             </svg> </a></li>
                 </ul>
             </div>
+            <div class="sign-up">
+                <b class="sign-up-bold-title">Подпишитесь на рассылку</b>
+                <form class="sign-up-form">
+                    <input type="email" name="email" placeholder="E-mail" class="sign-up-input-email" required>
+                    <button type="submit" class="sign-up-btn">Подписаться</button>
+                </form>
+            </div>
         </div>
     </footer>
     <!-- ===========================JAVA-SCRIPT============================= -->
-     <script src="./js/modal.js"></script>
+
+    <script src="./js/modal.js"></script>
+
+    <!-- ===========================END JAVA-SCRIPT============================= -->
+
 </body>
 
 </html>
