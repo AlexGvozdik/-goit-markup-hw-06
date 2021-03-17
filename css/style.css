@@ -504,7 +504,7 @@ outline: 1px solid var(--accent-text-color);
   position: absolute;
   display: block;
   content:"";
-  bottom: 5px;
+  bottom: 4px;
   right: 0;
   width: 100%;
   height: 1px;
@@ -869,7 +869,11 @@ outline: 1px solid var(--accent-text-color);
 }
 
 .footer-city-link.link {
+  display: block;
+  width: 231px;
+
   color: var(--primary-background-color);
+  
 }
 
 .social-join {
@@ -924,7 +928,7 @@ outline: 1px solid var(--accent-text-color);
 }
 
 .sign-up {
-  width: 100%;
+
 }
 
 .sign-up-bold-title {
@@ -940,10 +944,11 @@ outline: 1px solid var(--accent-text-color);
   color: var(--primary-background-color);
 }
 
-/* .sign-up-form {
-  display: block;
-min-width: 358px;
-} */
+.sign-up-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .sign-up-input-email {
   display: inline-block;
@@ -992,7 +997,7 @@ min-width: 358px;
   line-height: 1.87;
   letter-spacing: var(--hero-title-letter-spacing);
 
-  min-width: 200px;
+  max-width: 200px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1006,7 +1011,6 @@ min-width: 358px;
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  /* background-color: green; */
   background-image: url(../img/svg-icon/sign-up/paper-jet.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -1031,7 +1035,6 @@ min-width: 358px;
   background-size: contain;
   background-repeat: no-repeat;
   background-origin:border-box;
-  /* background-color: red; */
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
