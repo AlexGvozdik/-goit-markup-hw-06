@@ -333,6 +333,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-btn-svg-cross:hover .modal-svg-cross-icon,
 .close-btn-svg-cross:focus .modal-svg-cross-icon {
   fill: var(--accent-text-color);
 }
@@ -513,14 +514,19 @@ outline: 1px solid var(--accent-text-color);
 
 .form-btn-send-info {
   align-self: center;
+  max-width: 200px;
   cursor: pointer;
   margin-top: 30px;
-  
-  
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 56px;
   padding-right: 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: var(--hero-title-letter-spacing);
+
   color:var(--primary-background-color);
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
