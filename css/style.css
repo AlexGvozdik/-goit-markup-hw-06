@@ -927,10 +927,6 @@ outline: 1px solid var(--accent-text-color);
   fill: var(--primary-background-color);
 }
 
-.sign-up {
-
-}
-
 .sign-up-bold-title {
   display: block;
   margin-bottom: 20px;
@@ -1042,10 +1038,6 @@ outline: 1px solid var(--accent-text-color);
   transform: translateY(50%);
 }
 
-
-
-
-
 /* ==================== END FOOTER ===================== */
 /* ====================================================== PORTFOLIO.HTML ====================================== */
 /* ==================== PORT ===================== */
@@ -1123,18 +1115,6 @@ outline: 1px solid var(--accent-text-color);
   position: relative;
   overflow: hidden;
 }
-/* .thumb-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
-  transition: transform 250ms linear;
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
 .thumb-overlay-paragraph {
   position: absolute;
@@ -1145,8 +1125,6 @@ outline: 1px solid var(--accent-text-color);
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* overflow: scroll; */
 
   padding-top: 63px;
   padding-bottom: 63px;
