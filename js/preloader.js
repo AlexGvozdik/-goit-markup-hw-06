@@ -13,7 +13,7 @@ function preloader() {
 
     });
 }
-setTimeout(() => preloader(), 3000);
+setTimeout(() => preloader(), 1000);
 
 
 

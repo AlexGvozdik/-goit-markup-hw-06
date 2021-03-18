@@ -114,7 +114,6 @@ address {
   width: 100%;
   height: 100%;
   background-color: #34314c;
-  /* opacity: 0.5; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,18 +122,16 @@ address {
   margin: 0;
 }
 
-.preloader-content {
+.content {
   position: relative;
   width: 200px;
   height: 200px;
-  /* border: 1px solid red; */
   margin: 0;
-
 }
 
-.preloader-content-first,
-.preloader-content-second,
-.preloader-content-third {
+.content__first,
+.content__second,
+.content__third {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -144,17 +141,17 @@ address {
 
 }
 
-.preloader-content-first {
+.content__first {
   border-bottom: 3px solid #ff7473;
   animation-name: first;
 }
 
-.preloader-content-second {
+.content__second {
   border-bottom: 3px solid #ffc952;
   animation-name: second;
 }
 
-.preloader-content-third {
+.content__third {
   border-bottom: 3px solid #47b8e0;
   animation-name: third;
 }
